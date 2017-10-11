@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="PTP.js"></script>
+
+
+    <title> PTP Loan Apportionments </title>
+    <link href="PTP.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div id="header">
+    <h1>PTP Loan Apportionments</h1>
+    <h4> Welcome xyz </h4>
+</div>
+
+</br>
+</br>
+
+<div id="Comments">
+    <p> This is a simple page developed using Javascript/jquery/css and Spring Boot </p>
+    <p> This application takes user inputs to create PTP and Apportionments</p>
+    <p>Once PTP is succesfully created, corresponding id is updated. On succesfull PTP creation user can add
+        apportionments to the PTP.</p>
+    <p>Click at any cell in PTP table to add apportionments. Only if PTP is created(i.e PTP id updated) the
+        apportionment table will be available for updation</p>
+</div>
+
+<div id="ptp">
+
+    <button id="deletePTP">Delete PTP</button>
+    <button id="addPTP">Add PTP</button>
+    </br>
+    </br>
+
+    <table id="ptpTable">
+        <thead>
+        <tr>
+            <th> Select</th>
+            <th>PTP Type</th>
+            <th>Borrower Name</th>
+            <th>ID</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><input type="text" class="txtPtpType"></td>
+            <td><input type="text" class="txtBorrName"></td>
+            <td><input type="text" class="txtPTPId" disabled=""></td>
+        </tr>
+        <tbody>
+    </table>
+    <div id="ptpButtons">
+        <input id="savePTP" type="button" value="Save"/>
+        <input type="button" value="Clear"/>
+    </div>
+
+</div>
+
+
+<div id="apportDiv">
+    <button id="deleteApport">Delete</button>
+    <button id="addApport">Add</button>
+    <table id="apportTable">
+        <thead>
+        <tr>
+            <th>Select</th>
+            <th>Loan Type</th>
+            <th>Apportionment</th>
+            <th>Amount</th>
+            <th>ID</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><input type="text" class="txtLoanType"></td>
+            <td><input type="text" class="txtApportionment"></td>
+            <td><input type="text" class="txtAmount"></td>
+            <td><input type="text" class="txtApportId" disabled=""></td>
+
+        </tr>
+        <tbody>
+    </table>
+    <div id="apportButtons">
+        <input id="saveApport" type="button" value="Save Apportionment"/>
+        <input type="button" value="Clear"/>
+    </div>
+
+</div>
+
+
+</body>
+
+
+</html>
